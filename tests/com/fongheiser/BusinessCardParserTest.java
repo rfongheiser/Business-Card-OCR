@@ -34,19 +34,19 @@ class BusinessCardParserTest {
                 "Fax: +1 (703) 555-1200\n" +
                 "awilson@abctech.com";
 
-        BusinessCardParser.createNameRegex();
+        IBusinessCardParser parser = new BusinessCardParser();
 
-        ContactInfo info = BusinessCardParser.getContactInfo(document1);
+        IContactInfo info = parser.getContactInfo(document1);
         assertEquals("Mike Smith", info.getName());
         assertEquals("4105551234", info.getPhoneNumber());
         assertEquals("msmith@asymmetrik.com", info.getEmailAddress());
 
-        info = BusinessCardParser.getContactInfo(document2);
+        info = parser.getContactInfo(document2);
         assertEquals("Lisa Haung", info.getName());
         assertEquals("4105551234", info.getPhoneNumber());
         assertEquals("lisa.haung@foobartech.com", info.getEmailAddress());
 
-        info = BusinessCardParser.getContactInfo(document3);
+        info = parser.getContactInfo(document3);
         assertEquals("Arthur Wilson", info.getName());
         assertEquals("17035551259", info.getPhoneNumber());
         assertEquals("awilson@abctech.com", info.getEmailAddress());

@@ -7,19 +7,23 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-public class BusinessCardParser {
+public class BusinessCardParser implements IBusinessCardParser{
 
-    private static final String phoneRegex = "(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}";
-    private static final String emailRegex = "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$)";
+    private final String PHONE_REGEX = "(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}";
+    private final String EMAIL_REGEX = "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$)";
     private static String nameRegex = "^.*\\b(";
+
+    public BusinessCardParser() {
+        createNameRegex();
+    }
 
     /**
      * Returns ContactInfo given a document string
      * @param document
      * @return
      */
-    public static ContactInfo getContactInfo(String document) {
-        ContactInfo contactInfo = parseDocument(document);
+    public IContactInfo getContactInfo(String document) {
+        IContactInfo contactInfo = parseDocument(document);
         return contactInfo;
     }
 
@@ -27,7 +31,7 @@ public class BusinessCardParser {
      * Creates the name regex from a pre-compiled list of first names
      * This is called when the application first loads
      */
-    public static void createNameRegex() {
+    private void createNameRegex() {
         try (Stream<String> stream = Files.lines(Paths.get("src/names.txt"))) {
 
             for(String string : stream.toArray(String[]::new)) {
@@ -48,7 +52,7 @@ public class BusinessCardParser {
      * @param document
      * @return
      */
-    private static ContactInfo parseDocument(String document) {
+    private ContactInfo parseDocument(String document) {
         String name = "";
         String phoneNumber = "";
         String emailAddress = "";
@@ -61,14 +65,14 @@ public class BusinessCardParser {
             System.out.println("NO NAME MATCH");
         }
 
-        m = Pattern.compile(phoneRegex, Pattern.MULTILINE).matcher(document);
+        m = Pattern.compile(PHONE_REGEX, Pattern.MULTILINE).matcher(document);
         if (m.find( )) {
             phoneNumber = m.group(0).replaceAll("[+()\\s-]+", "");
         } else {
             System.out.println("NO PHONE MATCH");
         }
 
-        m = Pattern.compile(emailRegex, Pattern.MULTILINE).matcher(document);
+        m = Pattern.compile(EMAIL_REGEX, Pattern.MULTILINE).matcher(document);
         if (m.find()) {
             emailAddress = m.group(0);
         } else {

@@ -1,7 +1,8 @@
 package com.fongheiser.view;
 
 import com.fongheiser.BusinessCardParser;
-import com.fongheiser.ContactInfo;
+import com.fongheiser.IBusinessCardParser;
+import com.fongheiser.IContactInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -15,11 +16,22 @@ public class ContactViewController {
     @FXML
     private Label emailLabel;
 
+    private IBusinessCardParser parser;
+
     /**
      * The constructor.
      * The constructor is called before the initialize() method.
      */
     public ContactViewController() {
+        parser = new BusinessCardParser();
+    }
+
+    /**
+     * Sets the input text area text
+     * @param input
+     */
+    public void setInputTextArea(String input) {
+        inputTextArea.setText(input);
     }
 
     /**
@@ -38,7 +50,7 @@ public class ContactViewController {
      * 
      * @param contactInfo the contact or null
      */
-    private void showContactDetails(ContactInfo contactInfo) {
+    private void showContactDetails(IContactInfo contactInfo) {
         if (contactInfo != null) {
             // Fill the labels with info from the person object
             nameLabel.setText(contactInfo.getName());
@@ -55,7 +67,7 @@ public class ContactViewController {
     @FXML
     private void handleGetContactInfo() {
         String businessCard = inputTextArea.getText();
-        ContactInfo contactInfo = BusinessCardParser.getContactInfo(businessCard);
+        IContactInfo contactInfo = parser.getContactInfo(businessCard);
         showContactDetails(contactInfo);
     }
 }

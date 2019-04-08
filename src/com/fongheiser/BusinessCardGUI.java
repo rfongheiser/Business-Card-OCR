@@ -1,5 +1,7 @@
 package com.fongheiser;
 
+import com.fongheiser.view.ContactViewController;
+import com.fongheiser.view.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +15,7 @@ public class BusinessCardGUI extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
+    private RootLayoutController rootLayoutController;
 
     public static void main(String[] args) {
         launch(args);
@@ -23,7 +26,6 @@ public class BusinessCardGUI extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Business Card Parser");
 
-        BusinessCardParser.createNameRegex();
         initRootLayout();
         showContactView();
     }
@@ -43,6 +45,9 @@ public class BusinessCardGUI extends Application {
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
 
+            rootLayoutController = loader.getController();
+            rootLayoutController.setStage(primaryStage);
+
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,7 +66,8 @@ public class BusinessCardGUI extends Application {
 
             // Set contact view into the center of root layout
             rootLayout.setCenter(contactView);
-
+            ContactViewController controller = loader.getController();
+            rootLayoutController.setContactViewController(controller);
         } catch (IOException e) {
             e.printStackTrace();
         }

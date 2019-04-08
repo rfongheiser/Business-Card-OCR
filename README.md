@@ -14,7 +14,7 @@ There are two ways to run the program (terminal and file browser):
 
 The User Interface should open. To use the application:
 
-- Paste any business card text into the input box on the left pane of the UI
+- Paste any business card text into the input box on the left pane of the UI OR select a text file by clicking 'File -> Add Card'
 - Click 'Get Info'
 - Find the contact info on the right pane
 
