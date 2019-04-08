@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'Business_Card_OCR.jnlp'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedBusiness_Card_OCR_id() {
+        dtjava.embed(
+            {
+                id : 'Business_Card_OCR_id',
+                url : 'Business_Card_OCR.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '600',
+                height : '400'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedBusiness_Card_OCR_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>Business Card OCR</b></h2>
+  <b>Webstart:</b> <a href='Business_Card_OCR.jnlp' onclick="return launchApplication('Business_Card_OCR.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>
