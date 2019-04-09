@@ -1,6 +1,8 @@
 package com.fongheiser;
 
-public class ContactInfo implements IContactInfo{
+import com.fongheiser.interfaces.IContactInfo;
+
+public class ContactInfo implements IContactInfo {
     private String name;
     private String phoneNumber;
     private String emailAddress;

@@ -1,5 +1,8 @@
 package com.fongheiser;
 
+import com.fongheiser.interfaces.IBusinessCardParser;
+import com.fongheiser.interfaces.IContactInfo;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -7,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-public class BusinessCardParser implements IBusinessCardParser{
+public class BusinessCardParser implements IBusinessCardParser {
 
     private final String PHONE_REGEX = "(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}";
     private final String EMAIL_REGEX = "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$)";

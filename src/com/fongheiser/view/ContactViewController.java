@@ -1,8 +1,8 @@
 package com.fongheiser.view;
 
 import com.fongheiser.BusinessCardParser;
-import com.fongheiser.IBusinessCardParser;
-import com.fongheiser.IContactInfo;
+import com.fongheiser.interfaces.IBusinessCardParser;
+import com.fongheiser.interfaces.IContactInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 

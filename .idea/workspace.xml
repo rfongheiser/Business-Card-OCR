@@ -7,16 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef44654e-058c-4a0b-a085-f59d17959870" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/fongheiser/IBusinessCardParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fongheiser/IContactInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fongheiser/BusinessCardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fongheiser/BusinessCardGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fongheiser/BusinessCardParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fongheiser/BusinessCardParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fongheiser/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fongheiser/ContactInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fongheiser/view/ContactViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fongheiser/view/ContactViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fongheiser/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fongheiser/view/RootLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fongheiser/view/RootLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fongheiser/view/RootLayoutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/com/fongheiser/BusinessCardParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/fongheiser/BusinessCardParserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -72,11 +62,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/com/fongheiser/BusinessCardParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="391">
+              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+              <folding>
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="129" selection-start-line="16" selection-start-column="129" selection-end-line="16" selection-end-column="129" />
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -143,12 +137,12 @@
         <option value="$PROJECT_DIR$/src/com/fongheiser/ContactInfo.java" />
         <option value="$PROJECT_DIR$/src/com/fongheiser/IBusinessCardParser.java" />
         <option value="$PROJECT_DIR$/src/com/fongheiser/BusinessCardParser.java" />
-        <option value="$PROJECT_DIR$/tests/com/fongheiser/BusinessCardParserTest.java" />
         <option value="$PROJECT_DIR$/src/com/fongheiser/view/RootLayout.fxml" />
         <option value="$PROJECT_DIR$/src/com/fongheiser/view/ContactViewController.java" />
         <option value="$PROJECT_DIR$/src/com/fongheiser/BusinessCardGUI.java" />
         <option value="$PROJECT_DIR$/src/com/fongheiser/view/RootLayoutController.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/tests/com/fongheiser/BusinessCardParserTest.java" />
       </list>
     </option>
   </component>
@@ -243,7 +237,7 @@
       <module name="Business Card OCR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fongheiser.*" />
+          <option name="PATTERN" value="com.fongheiser.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -254,11 +248,26 @@
         </option>
       </method>
     </configuration>
+    <configuration name="BusinessCardParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Business Card OCR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fongheiser.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fongheiser" />
+      <option name="MAIN_CLASS_NAME" value="com.fongheiser.BusinessCardParserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BusinessCardParserTest.getContactInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Business Card OCR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fongheiser.*" />
+          <option name="PATTERN" value="com.fongheiser.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -273,10 +282,12 @@
     <list>
       <item itemvalue="Application.BusinessCardGUI" />
       <item itemvalue="JUnit.BusinessCardParserTest.getContactInfo" />
+      <item itemvalue="JUnit.BusinessCardParserTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BusinessCardGUI" />
+        <item itemvalue="JUnit.BusinessCardParserTest" />
         <item itemvalue="JUnit.BusinessCardParserTest.getContactInfo" />
       </list>
     </recent_temporary>
@@ -313,11 +324,48 @@
     <history-entry file="BusinessCardParserTest_getContactInfo - 2019.04.08 at 09h 36m 53s.xml">
       <configuration name="BusinessCardParserTest.getContactInfo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BusinessCardParserTest - 2019.04.08 at 22h 14m 09s.xml">
+      <configuration name="BusinessCardParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BusinessCardParserTest - 2019.04.08 at 22h 14m 57s.xml">
+      <configuration name="BusinessCardParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BusinessCardParserTest - 2019.04.08 at 22h 16m 02s.xml">
+      <configuration name="BusinessCardParserTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25266525" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
@@ -344,7 +392,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/fongheiser/view/ContactView.fxml">
@@ -400,13 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/fongheiser/BusinessCardParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fongheiser/BusinessCardGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -455,8 +496,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="129" selection-start-line="16" selection-start-column="129" selection-end-line="16" selection-end-column="129" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/fongheiser/BusinessCardParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+          <folding>
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,4 +1,4 @@
-package com.fongheiser;
+package com.fongheiser.interfaces;
 
 public interface IContactInfo {
     String getName();
